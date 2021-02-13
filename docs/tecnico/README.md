@@ -82,10 +82,12 @@ Os números Hex podem ser diferenciados dos de outros sistemas de numeração co
 Há dois esquemas de codificação principais usados pelos computadores para representar texto:
 
 **ASCII**: O *American Standard Code for Information Interchange* foi inventado há muito tempo e ainda é suportado em quase todos os editores de texto. Ele apresenta uma habilidade apenas limitada de representar as letras de todos os idiomas mundiais, assim como pontuação e símbolos especiais de outras línguas, porque usa apenas 7 bits ou 128 valores. Também há uma versão estendida do ASCII, chamada **Extended ASCII**, que dá suporte a 256 caracteres, mas ela ainda não oferece suporte a todos os idiomas internacionais.
-> A tabela do código **ASCII** pode ser encontrada em [https://ascii.cl](https://ascii.cl)
+
+A tabela do código [ASCII](https://ascii.cl) pode ser encontrada através do link.
 
 **Unicode**: A codificação **Unicode**, criada pelo *Unicode Consortium*, é um esquema de codificação de caracteres amplamente usado que fornece um número exclusivo para cada caractere de qualquer idioma internacional. O Unicode tem suporte na maioria dos sistemas operacionais, pacotes de software, dispositivos móveis e aplicações web. Ele costuma ser definido como **UTF-8, UTF-16, UTF-32** ou **UCS-2**.
-> A tabela do código **Unicode** pode ser encontrada em [https://unicode.org](https://unicode.org)
+
+A tabela do código [Unicode](https://unicode.org](https://unicode.org) pode ser encontrada através do link.
 
 ## Estrutura de arquivos
 
@@ -97,7 +99,31 @@ A maioria dos arquivos digitais tem uma assinatura localizada nos 20 primeiros b
 
 ## Editores Hex
 
-- **HxD**: [https://mh-nexus.de](https://mh-nexus.de)
-- **Free Hex Editor Neo**: [https://hhdsoftware.com/free-hex-editor](https://hhdsoftware.com/free-hex-editor)
-- **wxHexEditor**: [https://wxhexeditor.org](https://wxhexeditor.org)
-- **PSPad**: [httś://pspad.com](https://pspad.com)
+- [HxD](https://mh-nexus.de)
+- [Free Hex Editor Neo](https://hhdsoftware.com/free-hex-editor)
+- [wxHexEditor](https://wxhexeditor.org)
+- [PSPad](https://pspad.com)
+
+## Metadados de arquivos
+Os metadados são dados sobre dados. Quando todos os tipos de arquivo têm metadados associados a eles. Em geral os metadados vêm integrados no mesmo arquivo; no entanto, alguns tipos de arquivos armazenam seus metadados em um arquivo separado. Os metadados contêm dados que descrevem o arquivo aos quais estão associados.
+
+Da perspectiva da perícia, os metadados podem ser muito úteis em vários casos. Podemos rastrear os diferentes autores de um arquivo pelos metadados associados. Também podemos pesquisar dentro dos metadados do arquivo para localizar informações interessantes, e a maioria das ferramentas de computação forense dá suporte à busca nos metadados dos arquivos de imagem forenses obtidos.
+
+Os metadados de um arquivo de imagem contêm informações forenses importantes, como o timestamp de quando a foto foi tirada e as coordenadas GPS de onde foi tirada, além de detalhes e configurações da câmera.
+
+Há muitas ferramentas que podem visualizar e editar os metadados de um arquivo digital. Aqui estão algumas populares:
+
+- [Exif Pilot](https://colorpilot.com/exif.html) - Editor/visualizador de metadados de imagens
+- [Exif Tool](https://sno.phy.queensu.ca/~phil/exiftool) - Lê, grava e edita metainformações de uma grande variedade de arquivos digitais (a maioria dos formatos de imagens) criado por *Phil Harvey*.
+- [GIMP](https://gimp.org) - Editor de imagens; pode manipular/visualizar metadados de arquivos de imagens.
+- [XnView](https://xnview.com/en/) - Visualiza/edita metadados de imagens.
+- [PDF Metadata Editor](https://broken-by.me/pdf-metadata-editor) - Pra arquivos PDF.
+- [MP3tag](https://mp3tag.de/en) - Para arquivos de áudio.
+- [MediaInfo](https://mediaarea.net/en/MediaInfo) - Visualizador/editor de metadados para arquivos de vídeo e áudio.
+
+Do ponto de vista da perícia, a análise de metadados é muito importante para qualquer tipo de investigação, já que pode revelar um grande volume de informações sobre o caso em questão. Alguns usuários podem tentar manipular os metadados do arquivo para remover a evidência e enganar os investigadores. É função dos especialistas forenses descobrir essa alteração e tentar demonstrá-la para a corte. A maioria das ferramentas de computação forense permite a fácil extração e busca em massa nos metadados de arquivos.
+
+## Timestamps
+Os arquivos digitais contêm diferentes metadados dentro deles; os mais importantes são os metadados de timestamp, usados para representar vários evendos de data/hora associados no arquivo de interesse como a data/hora do último acesso, a data da última alteração e a data da criação. Durante nossa investigação, podemos encontrar uma data/hora que esteja codificada de maneira específica, a qual precisamos decodificá-la.
+
+A ferramenta [Decode](https://digital-detective.net/digital-forensic-software/free-tools) pode executar essa tarefa.

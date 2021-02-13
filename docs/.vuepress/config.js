@@ -34,8 +34,8 @@ themeConfig: {
    sidebar: [
       {
         title: 'Conceitos Básicos',
-        children: [ '/basico/' ],
-        collapsable: false,
+        children: [ '/basico/', '/cibercrime/' ],
+        collapsable: true,
       },
       {
         title: 'Conceitos Técnicos',
@@ -43,38 +43,9 @@ themeConfig: {
         collapsable: true,
       },
       {
-        title: 'Cibercrime',
-        children: [ '/cibercrime/' ],
-        collapsable: true,
-      },
-      {
-        title: 'Windows',
-        children: [ '/windows/' ],
-        collapsable: true,
-      },
-      {
-        title: 'Mobile',
-        children: [ '/mobile/' ],
-        collapsable: true,
-      },
-      {
-        title: 'Browsers',
-        children: [ '/browsers/' ],
-        collapsable: true,
-      },
-      {
-        title: 'E-mails',
-        children: [ '/emails/' ],
-        collapsable: true,
-      },
-      {
-        title: 'Antiforense',
-        children: [ '/antiforense/' ],
-        collapsable: true,
-      },
-      {
-        title: 'OSINT',
-        children: [ '/osint/' ],
+        title: 'Conceitos Avançados',
+        // path: '/avancado/',
+        children: [ '/windows/','/mobile/','/browsers/','/emails/','/antiforense/','/osint/',],
         collapsable: true,
       },
     ]
